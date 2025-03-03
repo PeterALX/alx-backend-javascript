@@ -1,4 +1,4 @@
-console.log('Welcome to ALX, what is your name?')
+process.stdout.write('Welcome to ALX, what is your name?')
 
 process.stdin.setEncoding('utf8')
 process.stdin.on('readable', () => {
