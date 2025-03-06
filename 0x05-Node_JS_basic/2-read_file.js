@@ -26,9 +26,14 @@ function countStudents(path) {
 		}
 	}
 	process.stdout.write(`Number of students: ${len.toString()}\n`)
+	let fLen = 0
 	for (const [k, v] of Object.entries(fields)) {
-		process.stdout.write(`Number of students in ${k}: ${v.studentNo}. List: ${v.studentList.join(', ')}`
+
+		let newLine = ''
+		if (fLen !== Object.entries(fields).length - 1) newLine = '\n'
+		process.stdout.write(`Number of students in ${k}: ${v.studentNo}. List: ${v.studentList.join(', ')}${newLine}`
 		)
+		fLen++
 	}
 }
 module.exports = countStudents
