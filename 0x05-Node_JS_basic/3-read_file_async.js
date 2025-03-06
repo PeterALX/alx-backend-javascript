@@ -1,10 +1,10 @@
-//import fs from 'node:fs'
-const fs = require('node:fs')
-function countStudents(path) {
-	if (!fs.existsSync(path)) {
+const fs = require('node:fs/promises')
+const existsSync = require('node:fs').existsSync
+async function countStudents(path) {
+	if (!existsSync(path)) {
 		throw new Error('Cannot load the database')
 	}
-	const data = fs.readFileSync(path, 'utf8')
+	const data = await fs.readFile(path, 'utf8')
 	const students = data.split(/\r?\n/)
 	let len = 0;
 	let fields = {}
