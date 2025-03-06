@@ -1,3 +1,3 @@
-const displayMessage = require('./0-console.js')
+const countStudents = require('./2-read_file.js')
 
-displayMessage('weweeee')
+countStudents('database.csv')
