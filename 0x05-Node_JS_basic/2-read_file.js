@@ -1,4 +1,3 @@
-//import fs from 'node:fs'
 const fs = require('node:fs')
 function countStudents(path) {
 	if (!fs.existsSync(path)) {

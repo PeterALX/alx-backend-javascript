@@ -1,7 +1,7 @@
 import express from 'express'
 import router from './routes/index.js'
 const app = express()
-const port = 3000
+const port = 1245
 
 app.use('/', router)
 app.listen(port, () => {
